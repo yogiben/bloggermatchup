@@ -1,0 +1,474 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dpMaintenance\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-08 09:48-0300\n"
+"PO-Revision-Date: 2012-07-08 10:41-0300\n"
+"Last-Translator: Diego Pereyra <info@dpereyra.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: templates\n"
+"X-Poedit-SearchPath-1: settings\n"
+
+#: templates/clean/index.php:199
+#: templates/dark/index.php:200
+#: templates/default/index.php:198
+#: templates/moderna/index.php:203
+msgid "Days"
+msgstr ""
+
+#: templates/clean/index.php:203
+#: templates/dark/index.php:204
+#: templates/default/index.php:202
+#: templates/moderna/index.php:207
+msgid "Hours"
+msgstr ""
+
+#: templates/clean/index.php:207
+#: templates/dark/index.php:208
+#: templates/default/index.php:206
+#: templates/moderna/index.php:211
+msgid "Minutes"
+msgstr ""
+
+#: templates/clean/index.php:211
+#: templates/dark/index.php:212
+#: templates/default/index.php:210
+#: templates/moderna/index.php:215
+msgid "Seconds"
+msgstr ""
+
+#: templates/clean/index.php:229
+#: templates/dark/index.php:231
+#: templates/default/index.php:229
+#: templates/moderna/index.php:232
+msgid "Completed!"
+msgstr ""
+
+#: templates/clean/index.php:320
+#: templates/dark/index.php:295
+#: templates/default/index.php:293
+#: templates/moderna/index.php:322
+msgid "Your name"
+msgstr ""
+
+#: settings/settings.php:67
+#: settings/settings.php:87
+msgid "General Settings"
+msgstr ""
+
+#: settings/settings.php:68
+#: settings/settings.php:208
+msgid "Timer Widget"
+msgstr ""
+
+#: settings/settings.php:69
+#: settings/settings.php:282
+msgid "Progress Bar Widget"
+msgstr ""
+
+#: settings/settings.php:70
+#: settings/settings.php:325
+msgid "Social Widget"
+msgstr ""
+
+#: settings/settings.php:71
+#: settings/settings.php:508
+msgid "Company Information"
+msgstr ""
+
+#: settings/settings.php:72
+#: settings/settings.php:564
+msgid "Flickr Images Widget"
+msgstr ""
+
+#: settings/settings.php:73
+#: settings/settings.php:635
+msgid "Twitter Feed Widget"
+msgstr ""
+
+#: settings/settings.php:74
+#: settings/settings.php:706
+msgid "Newsletter Widget"
+msgstr ""
+
+#: settings/settings.php:75
+#: settings/settings.php:844
+msgid "Contact Form Widget"
+msgstr ""
+
+#: settings/settings.php:76
+#: settings/settings.php:915
+msgid "Form Validations"
+msgstr ""
+
+#: settings/settings.php:98
+#: settings/settings.php:219
+#: settings/settings.php:293
+#: settings/settings.php:336
+#: settings/settings.php:519
+#: settings/settings.php:575
+#: settings/settings.php:646
+#: settings/settings.php:717
+#: settings/settings.php:775
+#: settings/settings.php:855
+msgid "Active:"
+msgstr ""
+
+#: settings/settings.php:104
+msgid "On/Off the Maintenance mode"
+msgstr ""
+
+#: settings/settings.php:112
+msgid "Theme:"
+msgstr ""
+
+#: settings/settings.php:125
+msgid "Select the theme style."
+msgstr ""
+
+#: settings/settings.php:133
+msgid "Logo:"
+msgstr ""
+
+#: settings/settings.php:140
+msgid "Enter an URL or upload an image for the logo."
+msgstr ""
+
+#: settings/settings.php:148
+msgid "Maintenance Message:"
+msgstr ""
+
+#: settings/settings.php:154
+msgid "Introduce the main message."
+msgstr ""
+
+#: settings/settings.php:162
+msgid "User Roles:"
+msgstr ""
+
+#: settings/settings.php:182
+msgid "Select the user role that will see the maintenance mode."
+msgstr ""
+
+#: settings/settings.php:190
+msgid "Footer Text:"
+msgstr ""
+
+#: settings/settings.php:196
+msgid "Introduce the text in the footer."
+msgstr ""
+
+#: settings/settings.php:225
+msgid "On/Off the timer widget"
+msgstr ""
+
+#: settings/settings.php:233
+#: settings/settings.php:350
+#: settings/settings.php:589
+#: settings/settings.php:660
+#: settings/settings.php:869
+msgid "Title:"
+msgstr ""
+
+#: settings/settings.php:239
+msgid "Introduce the title above the timer."
+msgstr ""
+
+#: settings/settings.php:247
+msgid "Expiration Date:"
+msgstr ""
+
+#: settings/settings.php:256
+msgid "Select the Expiration Date"
+msgstr ""
+
+#: settings/settings.php:264
+msgid "Deactive when timer expired?:"
+msgstr ""
+
+#: settings/settings.php:270
+msgid "Set if you want deactivate the maintenance mode automatically using the expiration date."
+msgstr ""
+
+#: settings/settings.php:299
+msgid "On/Off the progress bar widget"
+msgstr ""
+
+#: settings/settings.php:307
+msgid "Percentage Completed:"
+msgstr ""
+
+#: settings/settings.php:313
+msgid "Set the percentage completed of the maintenance."
+msgstr ""
+
+#: settings/settings.php:342
+msgid "On/Off the social widget"
+msgstr ""
+
+#: settings/settings.php:356
+msgid "Introduce the title of the social widget."
+msgstr ""
+
+#: settings/settings.php:364
+msgid "Twitter URL:"
+msgstr ""
+
+#: settings/settings.php:370
+msgid "Introduce your twitter url."
+msgstr ""
+
+#: settings/settings.php:378
+msgid "Facebook URL:"
+msgstr ""
+
+#: settings/settings.php:384
+msgid "Introduce your facebook url."
+msgstr ""
+
+#: settings/settings.php:392
+msgid "Google + URL:"
+msgstr ""
+
+#: settings/settings.php:398
+msgid "Introduce your google+ url."
+msgstr ""
+
+#: settings/settings.php:406
+msgid "Linkedin URL:"
+msgstr ""
+
+#: settings/settings.php:412
+msgid "Introduce your linkedin url."
+msgstr ""
+
+#: settings/settings.php:420
+msgid "Skype Username:"
+msgstr ""
+
+#: settings/settings.php:426
+msgid "Introduce your skype username."
+msgstr ""
+
+#: settings/settings.php:434
+msgid "Youtube URL:"
+msgstr ""
+
+#: settings/settings.php:440
+msgid "Introduce your youtube url."
+msgstr ""
+
+#: settings/settings.php:448
+msgid "Vimeo URL:"
+msgstr ""
+
+#: settings/settings.php:454
+msgid "Introduce your vimeo url."
+msgstr ""
+
+#: settings/settings.php:462
+msgid "Forrst URL:"
+msgstr ""
+
+#: settings/settings.php:468
+msgid "Introduce your forrst url."
+msgstr ""
+
+#: settings/settings.php:476
+msgid "Tumblr URL:"
+msgstr ""
+
+#: settings/settings.php:482
+msgid "Introduce your tumblr url."
+msgstr ""
+
+#: settings/settings.php:490
+msgid "Email:"
+msgstr ""
+
+#: settings/settings.php:496
+msgid "Introduce your email."
+msgstr ""
+
+#: settings/settings.php:525
+msgid "On/Off the information widget"
+msgstr ""
+
+#: settings/settings.php:533
+msgid "Introductory Paragraph Title:"
+msgstr ""
+
+#: settings/settings.php:539
+msgid "Introduce the title of the introduction."
+msgstr ""
+
+#: settings/settings.php:546
+msgid "Introductory Paragraph:"
+msgstr ""
+
+#: settings/settings.php:552
+msgid "Introduce the introduction."
+msgstr ""
+
+#: settings/settings.php:581
+msgid "On/Off the flickr images widget"
+msgstr ""
+
+#: settings/settings.php:595
+msgid "Introduce the title of the flickr images widget."
+msgstr ""
+
+#: settings/settings.php:603
+msgid "Flickr User ID:"
+msgstr ""
+
+#: settings/settings.php:609
+msgid "Introduce your flickr user id."
+msgstr ""
+
+#: settings/settings.php:617
+msgid "Number of Images:"
+msgstr ""
+
+#: settings/settings.php:623
+msgid "Set the number of images to retrieve."
+msgstr ""
+
+#: settings/settings.php:652
+msgid "On/Off the twitter feed widget"
+msgstr ""
+
+#: settings/settings.php:666
+msgid "Introduce the title of the twitter feed widget."
+msgstr ""
+
+#: settings/settings.php:674
+msgid "Twitter Username:"
+msgstr ""
+
+#: settings/settings.php:680
+msgid "Introduce your twitter username."
+msgstr ""
+
+#: settings/settings.php:688
+msgid "Quantity of Tweets:"
+msgstr ""
+
+#: settings/settings.php:694
+msgid "Set the quantity of tweets to retrieve."
+msgstr ""
+
+#: settings/settings.php:723
+msgid "On/Off the newsletter widget"
+msgstr ""
+
+#: settings/settings.php:731
+msgid "Title"
+msgstr ""
+
+#: settings/settings.php:737
+msgid "Introduce the title of the newsletter widget."
+msgstr ""
+
+#: settings/settings.php:745
+#: settings/settings.php:883
+msgid "Email Address:"
+msgstr ""
+
+#: settings/settings.php:751
+msgid "Introduce the Email address to receive newsletter subscriptions."
+msgstr ""
+
+#: settings/settings.php:759
+msgid "Subscribe Button:"
+msgstr ""
+
+#: settings/settings.php:765
+msgid "Introduce the Newsletter subscribe button text."
+msgstr ""
+
+#: settings/settings.php:781
+msgid "On/Off the MailChimp support."
+msgstr ""
+
+#: settings/settings.php:789
+msgid "API Key"
+msgstr ""
+
+#: settings/settings.php:793
+msgid "Get Lists"
+msgstr ""
+
+#: settings/settings.php:796
+msgid "Introduce your MailChimp API key."
+msgstr ""
+
+#: settings/settings.php:805
+msgid "List:"
+msgstr ""
+
+#: settings/settings.php:829
+msgid "Select a list to add the new suscribers."
+msgstr ""
+
+#: settings/settings.php:861
+msgid "On/Off the contact form widget"
+msgstr ""
+
+#: settings/settings.php:875
+msgid "Introduce the title of the contact form widget."
+msgstr ""
+
+#: settings/settings.php:889
+msgid "Introduce the Email address to receive the messages."
+msgstr ""
+
+#: settings/settings.php:897
+msgid "Send Button:"
+msgstr ""
+
+#: settings/settings.php:903
+msgid "Introduce the Send button text."
+msgstr ""
+
+#: settings/settings.php:926
+msgid "Newsletter Success:"
+msgstr ""
+
+#: settings/settings.php:932
+msgid "Introduce the text to show when the subscription is successful."
+msgstr ""
+
+#: settings/settings.php:940
+msgid "Contact Success:"
+msgstr ""
+
+#: settings/settings.php:946
+msgid "Introduce the text to show when the contact message has been sent successfully."
+msgstr ""
+
+#: settings/settings.php:954
+msgid "Error"
+msgstr ""
+
+#: settings/settings.php:960
+msgid "Introduce the text to show when occurs some error."
+msgstr ""
+
+#: settings/settings.php:968
+msgid "Required fields:"
+msgstr ""
+
+#: settings/settings.php:974
+msgid "Introduce the text to show when some required field is empty."
+msgstr ""
+
+#: settings/settings.php:986
+msgid "Save Changes"
+msgstr ""
+

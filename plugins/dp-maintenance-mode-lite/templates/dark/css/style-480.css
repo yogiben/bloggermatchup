@@ -1,0 +1,22 @@
+.container_clock {
+	width: 100%;
+}
+
+.container_clock ul#counter {
+	width: 200px;
+}
+
+.container_clock ul#counter li.days, .container_clock ul#counter li.minutes {
+	margin-left: 0;
+}
+
+h1 { font-size: 16px; }
+
+h2, .container_clock ul#counter li h3 { font-size: 20px; }
+
+.container_clock ul#counter span { font-size: 30px; }
+
+
+#loading_bar h2 {
+	font-size: 30px;
+}

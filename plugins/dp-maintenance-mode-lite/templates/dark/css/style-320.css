@@ -1,0 +1,15 @@
+h2.timer_widget_title {
+	font-size: 30px;
+}
+
+h1 { font-size: 13px; margin-top:7px; text-align:center; }
+
+
+.twitterContent {
+	background: none;
+	padding-left:0;
+}
+
+#loading_bar h2 {
+	font-size: 25px;
+}

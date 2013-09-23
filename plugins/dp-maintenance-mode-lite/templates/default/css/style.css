@@ -1,0 +1,336 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700italic);
+
+/************************************************************************
+-) BASIC
+*************************************************************************/
+
+body {
+	font-size:12px;
+	font-family: Arial, Helevtica, Verdana, san-serif;
+	background: #fff url(../images/bg.jpg) repeat 0 0;
+	color: #333;
+}
+
+a { text-decoration: none; color: #333; }
+
+h1 {
+	font-family: 'Lobster Two', cursive;
+	font-weight: bold; 
+	font-style:italic;
+	font-size:55px;
+	color:#7c91a6;
+	line-height:125%;
+}
+
+h2 {
+	font-family: 'Lobster Two', cursive;
+	font-weight: bold; 
+	font-style:italic;
+	font-size:30px;
+	color:#444444;
+}
+
+input.text, textarea.text {
+	padding:10px;
+	border:1px solid #dbdbdb;
+	width:280px;
+	color: #333;
+	font-family:Tahoma, Geneva, sans-serif;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin: 2px 0;
+}
+
+textarea.text {
+	height:100px;
+	resize: none;
+}
+
+.button {
+	background: url(../images/button_bg.png) repeat-x 0 0;	
+	border:0;
+	height:31px;
+	padding:0 30px 5px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #dbdbdb;
+	font-family: 'Lobster Two', cursive;
+	font-weight: bold; 
+	font-style:italic;
+	font-size:16px;
+	cursor: pointer;
+}
+
+.button:active {
+	background: url(../images/button_bg.png) repeat-x 0 -31px;	
+}
+
+a {
+	color: #7c91a6;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/************************************************************************
+-) TOP PAGE
+*************************************************************************/
+
+#top_page { 
+	position: relative;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	padding-top:40px;
+	padding-bottom:20px;
+	width: 100%;
+	background:url(../images/bg_top.png) repeat-x 0 0 transparent;
+	text-align:center;
+}
+
+#top_page #logo {
+	position:relative;
+	margin: auto;
+}
+
+/************************************************************************
+-) MAIN
+*************************************************************************/
+
+#main_content {
+	margin-bottom: 70px;
+}
+
+.container_clock {
+	position:relative;
+	text-align:center;
+}
+
+.container_clock h2{
+	float:right;
+}
+
+.container_clock ul#counter {
+	list-style:none;
+	margin:0 auto;
+	display: block;
+	float: right;
+}
+
+.container_clock ul#counter li {
+	float:left;
+	width:90px;
+	height:110px;
+	margin-top:20px;
+	margin-left: 20px;
+	background:url(../images/clock_bg.png) 50% 0 no-repeat;
+	text-align:center;
+	padding-top:35px;
+}
+
+.container_clock ul#counter span {
+	font-family: 'Lobster Two', cursive;
+	font-weight: bold; 
+	font-size:40px;
+	font-style:italic;
+	min-height:50px;
+	display:block;
+}
+
+.container_clock ul#counter li h3 {
+	font-family: 'Lobster Two', cursive;
+	font-weight: bold; 
+	font-size:30px;
+	font-style:italic;
+	margin-top:25px;
+}
+
+/************************************************************************
+-) LOADING BAR
+*************************************************************************/
+
+#loading_bar { 
+	position:relative;
+	padding-top:20px;
+	width: 100%;
+	height: 129px;
+	background:url(../images/loading_bar.png) repeat-x 0 0 transparent;
+	text-align:center;
+}
+
+#loading_bar h2{
+	color:#7c91a6;
+}
+
+#loading_bar span.up {
+	position:absolute;
+	left:50%;
+	top:-15px;
+	margin-left:-19px;
+	width: 38px;
+	height: 18px;
+	background:url(../images/loading_bar_up.png) no-repeat 50% 0 transparent;
+}
+
+/************************************************************************
+-) WIDGETS
+*************************************************************************/
+
+#widgets { 
+	position:relative;
+	padding:20px 0;
+	width: 100%;
+	background:url(../images/widgets_bg.png) repeat-x 0 0 #fafafa;
+}
+
+#widgets h2{
+	color:#4c5258;
+	font-size:24px;
+	margin-bottom:20px;
+}
+
+#widgets span.up {
+	position:absolute;
+	left:50%;
+	top:-15px;
+	margin-left:-19px;
+	width: 38px;
+	height: 18px;
+	background:url(../images/widgets_up.png) no-repeat 50% 0 transparent;
+}
+
+#widgets p{
+	line-height:150%;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top:10px;
+}
+
+/************************************************************************
+-) FOOTER
+*************************************************************************/
+
+#bottom_page { 
+	position: relative;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	padding-top:22px;
+	width: 100%;
+	height: 34px;
+	background:url(../images/bg_bottom.png) repeat-x 0 0 transparent;
+}
+
+#bottom_page p { 
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:14px;
+	color: #d9d9d9;
+}
+
+/************************************************************************
+-) PROGRESS BAR
+*************************************************************************/
+.ui-progressbar-value { background-image: url(../images/pbar-ani.gif); border-right:0; }
+
+.ui-progressbar { height:22px; }
+
+#progressbar {
+	margin:0 auto;
+	margin-top: 25px;
+	width: 620px;
+}
+
+/************************************************************************
+-) TWITTER
+*************************************************************************/
+.twitterContent {
+	padding: 10px 0;
+	background: transparent url(../images/twitter.png) no-repeat 25px 10px;
+	padding-left:100px;
+	margin-bottom:20px;
+	line-height:150%;
+}
+
+#twittMsg {
+	font-style:italic;
+}
+
+#twittMsg .date {
+	font-size: 13px;
+	font-style:normal;
+	display: inline-block;
+}
+
+.loading {
+	background: url(../images/loading.gif) no-repeat 50% 50%;
+	height: 31px;
+}
+
+/************************************************************************
+-) INFORMATION WIDGET
+*************************************************************************/
+.informationContent {
+	margin-bottom:30px;
+	line-height:150%;
+}
+
+/************************************************************************
+-) CONTACT WIDGET
+*************************************************************************/
+.contactContent {
+	margin-bottom:30px;
+	line-height:150%;
+}
+
+/************************************************************************
+-) NEWSLETTER WIDGET
+*************************************************************************/
+.newsletterContent {
+	line-height:150%;
+}
+
+.newsletterContent .newsletter_email {
+	margin-bottom: 7px;	
+}
+
+/************************************************************************
+-) SOCIAL WIDGET
+*************************************************************************/
+.socialContent {
+	line-height:150%;
+}
+
+.socialContent a{
+	opacity: .7;
+}
+
+.socialContent a:hover{
+	opacity: 1;
+}
+
+/************************************************************************
+-) FLICKR FEED
+*************************************************************************/
+.thumbs { margin: 0; padding: 0; overflow: hidden; }
+.thumbs li { list-style: none; float: left; margin: 5px; padding: 3px; background: #eee; -moz-box-shadow: 0 0 4px #444; -webkit-box-shadow: 0 0 2px #000; }
+.thumbs li img { display: block; opacity: .8; }
+.thumbs li img:hover { opacity: 1; }
+.thumbs li a img { border: none;}
+
+
+/************************************************************************
+-) NOTIFICATIONS
+*************************************************************************/
+.notification{
+	padding:5px 10px;
+	background:#fffed0;
+	border:1px solid #d4d287;
+	color:#333;
+	position:relative;
+	cursor:pointer;
+	margin-bottom:10px;
+}
