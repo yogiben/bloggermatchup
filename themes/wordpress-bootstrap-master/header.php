@@ -32,6 +32,8 @@
 
 		<!-- theme options from options panel -->
 		<?php get_wpbs_theme_options(); ?>
+		
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 		<!-- typeahead plugin - if top nav search bar enabled -->
 		<?php require_once('library/typeahead.php'); ?>
@@ -77,6 +79,10 @@
 				</div> <!-- end .navbar -->
 			
 			</div> <!-- end #inner-header -->
+			
+			<script>
+			    $ = jQuery;
+			</script>
 		
 		</header> <!-- end header -->
 		

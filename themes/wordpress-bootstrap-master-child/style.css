@@ -16,3 +16,115 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+.navbar .nav > li > a {
+padding: 20px 15px 20px;
+font-size:20px;
+}
+
+
+.navbar .brand {
+padding: 20px 20px 20px;
+}
+
+
+
+
+
+	
+.social {
+list-style: none;
+margin: 3px 0 10px 0px;
+margin-right:10px;
+}
+
+.social li {
+display: inline-block;
+text-indent: -999em;
+line-height: 18px;
+}
+
+
+.social li a, #flickr_badge_wrapper img, .flex-direction-nav li a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .pagination a, .category a, .widget ul.list li a, .archives .list a, .tags a, .post .info a, input, textarea {
+-webkit-transition: all 0.3s ease-out;
+-moz-transition: all 0.3s ease-out;
+-ms-transition: all 0.3s ease-out;
+-o-transition: all 0.3s ease-out;
+transition: all 0.3s ease-out;
+}
+
+
+
+.social li a {
+display: block;
+width: 32px;
+height: 32px;
+margin-left: 5px;
+background-image: url(img/background/social.png);
+background-repeat: no-repeat;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+border-radius: 16px;
+-moz-background-clip: padding;
+-webkit-background-clip: padding-box;
+background-clip: padding-box;
+}
+
+.social li a {
+background-color: #bbb;
+}
+
+.social li:first-child a {
+margin-left: 0;
+}
+
+
+.social li a:hover {
+border-top-left-radius: 0px;
+}
+
+.social li a.facebook:hover {
+background-color: #3c5fac;
+}
+
+.social li a.twitter:hover {
+background-color: #5ec3df;
+}
+
+.social li a.google {
+background-position: -256px 0;
+}
+
+.social li a.twitter {
+background-position: -32px 0;
+}
+
+.social li a.google:hover {
+background-color: #c63d2d;
+}
+
+.social li a.pinterest:hover {
+background-color: #cb2027;
+}
+
+.social li a.pinterest {
+background-position: -416px 0;
+}
+
+
+
+.social li a.rss:hover {
+background-color: #ff9900;
+}
+
+.social li a.rss {
+background-position: -96px 0;
+}
+
+
+
+
+.sidebar-industry-blogger
+{
+    text-align:center;
+}
+}
