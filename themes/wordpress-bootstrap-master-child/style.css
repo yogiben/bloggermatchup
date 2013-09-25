@@ -35,31 +35,35 @@ padding: 20px 20px 20px;
 list-style: none;
 margin: 3px 0 10px 0px;
 margin-right:10px;
+
+text-align: left;
 }
 
 .social li {
-display: inline-block;
-text-indent: -999em;
+display: block;
 line-height: 18px;
 }
 
 
-.social li a, #flickr_badge_wrapper img, .flex-direction-nav li a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .pagination a, .category a, .widget ul.list li a, .archives .list a, .tags a, .post .info a, input, textarea {
+.social li span, #flickr_badge_wrapper img, .flex-direction-nav li a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, .pagination a, .category a, .widget ul.list li a, .archives .list a, .tags a, .post .info a, input, textarea {
 -webkit-transition: all 0.3s ease-out;
 -moz-transition: all 0.3s ease-out;
 -ms-transition: all 0.3s ease-out;
 -o-transition: all 0.3s ease-out;
 transition: all 0.3s ease-out;
+margin-left:0px;
 }
 
 
 
-.social li a {
-display: block;
+.social li span {
+    
+position:relative;
+text-align:center;
+display: inline-block;
 width: 32px;
 height: 32px;
-margin-left: 5px;
-background-image: url(img/background/social.png);
+/*background-image: url(img/background/social.png);*/
 background-repeat: no-repeat;
 -webkit-border-radius: 16px;
 -moz-border-radius: 16px;
@@ -69,44 +73,44 @@ border-radius: 16px;
 background-clip: padding-box;
 }
 
-.social li a {
+.social li span {
 background-color: #bbb;
 }
 
-.social li:first-child a {
+.social li:first-child span {
 margin-left: 0;
 }
 
 
-.social li a:hover {
+.social li span:hover {
 border-top-left-radius: 0px;
 }
 
-.social li a.facebook:hover {
+.social li span.facebook:hover {
 background-color: #3c5fac;
 }
 
-.social li a.twitter:hover {
+.social li span.twitter:hover {
 background-color: #5ec3df;
 }
 
-.social li a.google {
+.social li span.google {
 background-position: -256px 0;
 }
 
-.social li a.twitter {
+.social li span.twitter {
 background-position: -32px 0;
 }
 
-.social li a.google:hover {
+.social li span.google:hover {
 background-color: #c63d2d;
 }
 
-.social li a.pinterest:hover {
+.social li span.pinterest:hover {
 background-color: #cb2027;
 }
 
-.social li a.pinterest {
+.social li span.pinterest {
 background-position: -416px 0;
 }
 
@@ -127,4 +131,25 @@ background-position: -96px 0;
 {
     text-align:center;
 }
+
+
+.social li i{
+font-size: 18px;
+position: relative;
+margin-left: 10px;
+bottom: 9px;
+}
+
+.social-icon
+{
+    position: absolute;
+    top: 7px;
+    font-size: 20px;
+    left: 11px;
+}
+
+
+#blogger-profile-image img
+{
+    border-radius: 50%;
 }
