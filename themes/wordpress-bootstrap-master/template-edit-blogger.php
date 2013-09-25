@@ -8,7 +8,7 @@ Template Name: Blogger Edit Profile
 			
 			<div id="content" class="clearfix row-fluid">
             
-            	<?php get_sidebar($edit); // sidebar 1 ?>
+            	<?php get_sidebar('edit'); // sidebar 1 ?>
 			
 				<div id="main" class="span8 clearfix" role="main">
 

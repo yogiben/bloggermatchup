@@ -1,0 +1,18 @@
+/*
+ Theme Name:     wp-bootstrap
+ Theme URI:      http://example.com/twenty-thirteen-child/
+ Description:    Twenty Thirteen Child Theme
+ Author:         John Doe
+ Author URI:     http://example.com
+ Template:       wordpress-bootstrap-master
+ Version:        1.0.0
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../wordpress-bootstrap-master/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+

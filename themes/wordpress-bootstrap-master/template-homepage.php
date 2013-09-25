@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Homepage
+Template Name: BMU Homepage
 */
 ?>
 
@@ -81,7 +81,7 @@ Template Name: Homepage
 						
 							<div class="hero-unit" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-repeat: no-repeat; background-position: 0 0;">
 
-								<h1>Blogger Match Up ?></h1>
+									<h1>Blogger Match Up</h1>
 								
 								<h2>Where bloggers and industry meet</h2>
 							
@@ -91,13 +91,29 @@ Template Name: Homepage
 						
 						<section class="row-fluid post_content">
 						
-							<div class="span8">
+							<div class="span6" id="homepage-industry">
 						
-								<?php the_content(); ?>
-								
+								<h2>For Industry</h2>
+								<h3>Are you looking for a blogger?</h3>
+                                
+                                <ul>
+                                    <li>Search through blogger</li>
+                                    <li>Accurate Stats</li>
+                                </ul>
+                                <a class="btn btn-large btn-success" href="http://bloggermatchup.com/industry/sign-up/">Sign Up</a>
 							</div>
-							
-							<?php get_sidebar('sidebar2'); // sidebar 2 ?>
+                            <div class="span6" id="homepage-blogger">
+						
+								<h2>For Bloggers</h2>
+								<h3>Get noticed</h3>
+                                
+                                <ul>
+                                    <li>Free!</li>
+                                    <li>Find great companies</li>
+                                </ul>
+                                
+                                <a class="btn btn-large btn-success" href="http://bloggermatchup.com/blogger/sign-up/">Sign Up</a>
+							</div>
 													
 						</section> <!-- end article header -->
 						
