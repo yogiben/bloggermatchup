@@ -44,7 +44,7 @@
 		
 			<div id="inner-header" class="clearfix">
 				
-				<div class="navbar navbar-fixed-top">
+				<div class="navbar navbar-fixed-top navbar-inverse">
 					<div class="navbar-inner">
 						<div class="container-fluid nav-container">
 							<nav role="navigation">
@@ -60,7 +60,7 @@
 							        <span class="icon-bar"></span>
 								</a>
 								
-								<div class="nav-collapse">
+								<div class="nav-collapse pull-right">
 									<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
 								</div>
 								
