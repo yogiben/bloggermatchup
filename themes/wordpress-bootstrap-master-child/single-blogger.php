@@ -17,10 +17,20 @@
             	   <a class="blogger-sidebar-email" target="_blank" href="mailto<?php the_field('email');?>"><i class="icon-envelope"></i> <?php the_field('name');?> <?php the_field('surname');?></a>
             	   
             	    <ul class="social">
-                    <li><a target="_blank" class="facebook" href="http://www.facebook.com/bigblogmap">Facebook</a></li>
-                    <li><a target="_blank" class="twitter" href="http://twitter.com/#!/bigblogmap">Twitter</a></li>
-                    <li><a target="_blank" class="google" href="https://plus.google.com/109255999969650423867">Google+</a></li>
-                    <li><a target="_blank" class="pinterest" href="http://pinterest.com/bigblogmap/">Pinterest</a></li>
+                    
+                    <?php
+                    if(get_field('facebook_page'))
+                    {
+                    ?>
+                        <li><a target="_blank" title="<?php the_field('facebook_likes'); ?>" class="facebook tooltipster" href="<?php the_field('facebook_page');?>">Facebook</a></li>
+                    <?php
+                    };
+                    ?>
+                     
+                    
+                    <li><a target="_blank" class="twitter tooltipster" href="http://twitter.com/#!/bigblogmap">Twitter</a></li>
+                    <li><a target="_blank" class="google tooltipster" href="https://plus.google.com/109255999969650423867">Google+</a></li>
+                    <li><a target="_blank" class="pinterest tooltipster" href="http://pinterest.com/bigblogmap/">Pinterest</a></li>
                     </ul>
                     
             	</div><!--End of sidebar-->
