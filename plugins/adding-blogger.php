@@ -38,7 +38,7 @@ add_action('init', 'blogger_register');
 		'rewrite' => true, 'capability_type' => 'post', 
 		'hierarchical' => false, 
 		'menu_position' => null, 
-		'supports' => array('title','editor','thumbnail', 'comments','author'),
+		'supports' => array('title','editor','thumbnail','author'),
 		'taxonomies' => array('category','tags')
 	);   
 	

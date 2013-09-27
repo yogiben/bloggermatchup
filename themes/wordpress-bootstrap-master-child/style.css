@@ -153,3 +153,15 @@ bottom: 9px;
 {
     border-radius: 50%;
 }
+
+
+#sidebar-section-traffic table
+{
+    width:100%;
+}
+
+
+.single-blogger #main table
+{
+      width:100%; 
+}
