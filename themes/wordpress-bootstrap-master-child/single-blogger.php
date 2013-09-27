@@ -364,7 +364,7 @@
                                 <tr>
                                 
                                     <td class="tooltipster" title="<?php echo $lifestyle; echo $lifestyle_additional;?>">
-                                        Work life: <strong><?php echo $lifestyle;?></strong>
+                                        <i class="icon-suitcase"></i> <strong><?php echo $lifestyle;?></strong>
                                     </td>                                    
                                     
 						          </tr>
@@ -509,7 +509,7 @@
 						    <div id="chart_div" style="width: 475; height: 300px;"></div>
 						</section>
 						
-						<section>
+						<section id="blogger-audience">
 						    
 						    <h4>Audience</h4>
 						    <table>
@@ -549,18 +549,92 @@
 						            
 						            </strong></td>
 						            
+						            
 						        </tr>
 						    </table>
 						    
 						    <table>
 						        <tr>
 						            <td>Typical age: <strong><?php the_field('audience');?></strong></td>
-						            <td>Typical gender: <strong><?php the_field('gender_balance');?></strong></td>
+						            <td>Typical gender: <strong><?php 
+                                        
+                                        $field = get_field_object('gender_balance');
+                                        echo $field['choices'][get_field('gender_balance')];
+                                        
+						            ?>
+						            </strong></td>
+						            
+						            <td>
+						                Average Duration: <strong><?php the_field('average_duration');?></strong>
+						            </td>
 						        </tr>
 						    </table>
 						    
-						    <p><?php the_field('demographics_description');?></p>
+						    <h5>About the audience</h5><?php the_field('demographics_description');?>
 						    
+						    
+						</section>
+						
+						
+						<section id="blogger-audience">
+						
+				        <h4>Experience</h4>
+				        
+				        <p>This blog has been running for <?php the_field('blog_age');?> years</p>
+				        
+				        <?php
+				        
+				         if (get_field('worked_with_tat')){
+                        ?>
+                         
+                         <p>
+                             <strong>This blogger has experience with a TAT</strong><br/>
+                             <?php the_field('tat_experience');?>
+                         </p>
+                         
+                         <?php
+                         };
+				        
+				        ?>
+				        
+                         <?php
+                         if (get_field('worked_with_industry')){
+                        ?>
+                         
+                         <p>
+                             <strong>This blogger has experience with a TAT</strong><br/>
+                             <?php the_field('industry_experience');?>
+                         </p>
+                         
+                         <?php
+                         }
+                         ?>
+                         
+                         <?php if (get_field('awards')){
+                         
+                            echo '<h5>Awards</h5>';
+                            
+                            while(has_sub_field('awards'))
+                            {
+                                        echo '<p class="awards">';
+                                        echo '<strong>';
+                                        echo '<a target="_blank" href="';
+                                        the_field('award_url');
+                                        echo '">';
+                                        echo get_sub_field('award_name');
+                                        echo '</a>';
+                                        echo '</strong>';
+                                        echo '<br/>';                                        
+                                        the_sub_field('award_description');
+                                        echo '</p>';
+                                        
+                            };
+
+                         };
+                         ?>
+                         
+                         
+						
 						</section>
 						
 						
@@ -571,8 +645,7 @@
 						</footer> <!-- end article footer -->
 					
 					</article> <!-- end article -->
-					
-					<?php comments_template(); ?>
+
 					
 					<?php endwhile; ?>	
 					
