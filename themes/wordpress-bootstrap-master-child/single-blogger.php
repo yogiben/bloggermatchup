@@ -15,7 +15,8 @@
             	   
             	   <a class="blogger-sidebar-link" target="_blank" href="<?php the_field('blog_url');?>"><i class="icon-link"></i> <?php the_field('blog_name');?></a><br/>
             	   <a class="blogger-sidebar-email" target="_blank" href="mailto:<?php the_field('email');?>"><i class="icon-envelope"></i> <?php the_field('name');?> <?php the_field('surname');?></a>
-            	   
+
+            	    
             	    <hr/>
             	    
             	    <div id="sidebar-section-traffic" class="sidebar-section">
@@ -35,12 +36,6 @@
                                 <td><?php the_field('page_views_1_year')?></td>
                             </tr>
     
-                        </table>
-                        
-                        <table>
-                            <tr>
-                                <td>Bounce rate: <?php echo get_field('bounce_rate'); ?></td>
-                            </tr>
                         </table>
                        
                         
@@ -62,6 +57,77 @@
                             </tr>
     
                         </table>
+                        
+                        <div class="sidebar-section-hidden" style="display:none;">
+                        
+                        
+                        <h4>Traffic Sources</h4>
+                        <table>
+						        <tr>
+						            <td>1st: <strong><?php
+						            
+						            echo '<img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_field('visitor_nationality_1')).'.png"></img>';
+						            
+						            $field = get_field_object('visitor_nationality_1');
+						            echo $field['choices'][get_field('visitor_nationality_1')];
+						            
+						            ?>
+						            
+						            </strong></td>
+						            
+						            
+                                    <td>2nd: <strong><?php
+						            
+						            echo '<img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_field('visitor_nationality_2')).'.png"></img>';
+						            
+						            $field = get_field_object('visitor_nationality_2');
+						            echo $field['choices'][get_field('visitor_nationality_2')];
+						            
+						            ?>
+						            
+						            </strong></td>
+
+						            
+                                    <td>3rd: <strong><?php
+						            
+						            echo '<img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_field('visitor_nationality_3')).'.png"></img>';
+						            
+						            $field = get_field_object('visitor_nationality_3');
+                                    echo $field['choices'][get_field('visitor_nationality_3')];
+						            
+						            ?>
+						            
+						            </strong></td>
+						            
+						            
+						        </tr>
+						    </table>
+                        
+                        <h4>Demographics</h4>
+                        <table>
+                            <tr>
+                                    <td>Typical age: <strong><?php the_field('audience');?></strong></td>
+						            <td>Typical gender: <strong><?php 
+                                        
+                                        $field = get_field_object('gender_balance');
+                                        echo $field['choices'][get_field('gender_balance')];
+                                        
+						            ?>
+						            </strong></td>
+                            </tr>
+                        </table>
+                        
+                        <table>
+                            <tr>
+                                <td><i class="icon-exchange"></i> Bounce rate: <?php echo get_field('bounce_rate'); ?>%</td>
+                            </tr>
+                            <tr>
+                                <td><i class="icon-time"></i> Average duration: <?php the_field('average_duration');?> mins</td>
+                            </tr>
+                        </table>
+                        
+                        </div>
+                        <div class="sidebar-slide-down">Show more</div>
             	    
             	    </div>
             	    
@@ -84,7 +150,7 @@
                         }
                     
                     ?>
-                        <li><a target="_blank" title="<?php the_field('facebook_likes');?> Facebook likes<?php echo $facebookAdditional;?>" class="tooltipster" href="<?php the_field('facebook_page');?>"><span class="facebook"><icon class="icon-facebook social-icon"></icon></span><i class="sidebar-stat"><?php the_field('facebook_likes'); ?> likes</i></a></li>
+                        <li><a target="_blank" title="<?php the_field('facebook_likes');?> Facebook likes<?php echo $facebookAdditional;?>" class="tooltipster" href="<?php the_field('facebook_page');?>"><span class="facebook"><icon class="icon-facebook social-icon icon-smaller"></icon></span><i class="sidebar-stat"><strong><?php the_field('facebook_likes'); ?></strong> likes</i></a></li>
                     <?php
                     };
                     ?>
@@ -119,7 +185,7 @@
                     };
                     ?>
                         
-                        <li><a target="_blank" title="<?php echo $totalFollowers.$accountsMessage?> Twitter followers" class="tooltipster" href="http://twitter.com/<?php echo $twitterPrimaryUrl;?>"><span class="twitter"><icon class="icon-twitter social-icon"></icon></span><i class="sidebar-stat"><?php echo $totalFollowers;?> followers</i></a></li>
+                        <li><a target="_blank" title="<?php echo $totalFollowers.$accountsMessage?> Twitter followers" class="tooltipster" href="http://twitter.com/<?php echo $twitterPrimaryUrl;?>"><span class="twitter"><icon class="icon-twitter social-icon"></icon></span><i class="sidebar-stat"><strong><?php echo $totalFollowers;?></strong> followers</i></a></li>
                     <?php
                     };
                     ?>
@@ -139,7 +205,7 @@
                         }
                     
                     ?>
-                    <li><a target="_blank" title="<?php the_field('google_plus_page_plus_ones');?> +1s<?php echo $googleAdditional;?>" class="tooltipster" href="<?php the_field('google+');?>"><span class="google"><icon class="icon-google-plus social-icon"></icon></span><i class="sidebar-stat"><?php the_field('google_plus_page_plus_ones'); ?> +1s</i></a></li>
+                    <li><a target="_blank" title="<?php the_field('google_plus_page_plus_ones');?> +1s<?php echo $googleAdditional;?>" class="tooltipster" href="<?php the_field('google+');?>"><span class="google"><icon class="icon-google-plus social-icon"></icon></span><i class="sidebar-stat"><strong><?php the_field('google_plus_page_plus_ones'); ?></strong> +1s</i></a></li>
                     <?php
                     };
                     ?>
@@ -150,7 +216,7 @@
                     
                     
                     ?>
-                    <li><a target="_blank" title="<?php the_field('linkedin_connections');?> connections" class="tooltipster" href="<?php the_field('linkedin');?>"><span class="linkedin"><icon class="icon-linkedin social-icon"></icon></span><i class="sidebar-stat"><?php the_field('linkedin_connections'); ?> followers</i></a></li>
+                    <li><a target="_blank" title="<?php the_field('linkedin_connections');?> connections" class="tooltipster" href="<?php the_field('linkedin');?>"><span class="linkedin"><icon class="icon-linkedin social-icon"></icon></span><i class="sidebar-stat"><strong><?php the_field('linkedin_connections'); ?></strong> connections</i></a></li>
                     <?php
                     };
                     ?>
@@ -162,7 +228,7 @@
                     
                     
                     ?>
-                    <li><a target="_blank" title="<?php the_field('pinterest_followers');?> Pinterest followers" class="tooltipster" href="<?php the_field('pinterest');?>"><span class="pinterest"><icon class="icon-pinterest social-icon"></icon></span><i class="sidebar-stat"><?php the_field('pinterest_followers'); ?> followers</i></a></li>
+                    <li><a target="_blank" title="<?php the_field('pinterest_followers');?> Pinterest followers" class="tooltipster" href="<?php the_field('pinterest');?>"><span class="pinterest"><icon class="icon-pinterest social-icon"></icon></span><i class="sidebar-stat"><strong><?php the_field('pinterest_followers'); ?></strong> followers</i></a></li>
                     <?php
                     };
                     ?>
@@ -173,7 +239,7 @@
                     
                     
                     ?>
-                    <li><a target="_blank" title="<?php the_field('youtube_subscribers');?> Youtube subscribers" class="tooltipster" href="<?php the_field('youtube');?>"><span class="youtube"><icon class="icon-youtube social-icon"></icon></span><i class="sidebar-stat"><?php the_field('youtube_subscribers'); ?> subscribers</i></a></li>
+                    <li><a target="_blank" title="<?php the_field('youtube_subscribers');?> Youtube subscribers" class="tooltipster" href="<?php the_field('youtube');?>"><span class="youtube"><icon class="icon-youtube social-icon"></icon></span><i class="sidebar-stat"><strong><?php the_field('youtube_subscribers'); ?></strong> subscribers</i></a></li>
                     <?php
                     };
                     ?>
@@ -185,20 +251,20 @@
                     
                     
                     ?>
-                    <li><a target="_blank" title="<?php the_field('weibo_followers');?> Weibo followers" class="tooltipster" href="<?php the_field('weibo');?>"><span class="weibo"><icon class="icon-weibo social-icon"></icon></span><i class="sidebar-stat"><?php the_field('weibo_followers'); ?> followers</i></a></li>
+                    <li><a target="_blank" title="<?php the_field('weibo_followers');?> Weibo followers" class="tooltipster" href="<?php the_field('weibo');?>"><span class="weibo"><icon class="icon-weibo social-icon"></icon></span><i class="sidebar-stat"><strong><?php the_field('weibo_followers'); ?></strong> followers</i></a></li>
                     <?php
                     };
                     ?>
                     
                     
-                    <div class="sidebar-section-hidden">
+                    <div class="sidebar-section-hidden" style="display:none;">
                         <?php
                         if(get_field('klout'))
                         {
                         
                         
                         ?>
-                        <li><a target="_blank" title="A Klout score of <?php the_field('klout_score');?>" class="tooltipster" href="<?php the_field('klout');?>"><span class="klout"><icon class="icon-klout social-icon">K</icon></span><i class="sidebar-stat"><?php the_field('klout_score'); ?> Klout score</i></a></li>
+                        <li><a target="_blank" title="A Klout score of <?php the_field('klout_score');?>" class="tooltipster" href="<?php the_field('klout');?>"><span class="klout"><icon class="icon-klout social-icon">K</icon></span><i class="sidebar-stat"><strong><?php the_field('klout_score'); ?></strong> Klout score</i></a></li>
                         <?php
                         };
                         ?>
@@ -210,7 +276,7 @@
                         
                         
                         ?>
-                        <li><a target="_blank" title="A Kred score of <?php the_field('kred_score');?>" class="tooltipster"><span class="kred"><icon class="icon-kred social-icon">K</icon></span><i class="sidebar-stat"><?php the_field('kred_score'); ?> Kred score</i></a></li>
+                        <li><a target="_blank" title="A Kred score of <?php the_field('kred_score');?>" class="tooltipster"><span class="kred"><icon class="icon-kred social-icon">K</icon></span><i class="sidebar-stat"><strong><?php the_field('kred_score'); ?></strong> Kred score</i></a></li>
                         <?php
                         };
                         ?>
@@ -221,7 +287,7 @@
                         
                         
                         ?>
-                        <li><a target="_blank" title="A PeerIndex score of <?php the_field('peerindex_score');?>" class="tooltipster"><span class="peerindex"><icon class="icon-peerindex social-icon">P</icon></span><i class="sidebar-stat"><?php the_field('peerindex_score'); ?> PeerIndex score</i></a></li>
+                        <li><a target="_blank" title="A PeerIndex score of <?php the_field('peerindex_score');?>" class="tooltipster"><span class="peerindex"><icon class="icon-peerindex social-icon">P</icon></span><i class="sidebar-stat"><strong><?php the_field('peerindex_score'); ?></strong> PeerIndex score</i></a></li>
                         <?php
                         };
                         ?>
@@ -257,8 +323,8 @@
 							     <h4><?php the_field('blog_short_description'); ?></h4>
                                   <table>
                                       <tr>
-                                          <td class="tooltipster" title="The category of this blog"><i class="icon-asterisk"></i> <?php the_field('category'); ?></td>
-                                          <td class="tooltipster" title="The primary way this blogger communicates"><i class="icon-indent-right"></i> <?php the_field('primary_medium'); ?></td>
+                                          <td class="tooltipster" title="The category of this blog"><i class="icon-asterisk"></i> <?php $field = get_field_object('category'); echo $field['choices'][get_field('category')]; ?></td>
+                                          <td class="tooltipster" title="The primary way this blogger communicates"><i class="icon-indent-right"></i> <?php $field = get_field_object('primary_medium'); echo $field['choices'][get_field('primary_medium')]; ?></td>
                                           <td class="tooltipster" title="The budget range this blogger tends to write about"><i class="icon-usd"></i> <?php $field = get_field_object('field_523c56837bccc'); echo $field['choices'][get_field('budget_range')]; ?></td>
                                           <td class="tooltipster" title="The blog language"><i class="icon-comment"></i> <?php the_field('language');?> <?php echo implode(', ', get_field('other_language')); ?></td>
                                       </tr>
@@ -271,8 +337,10 @@
 						
                           
                           
+                          
                           <h4>Blog Description</h4>
-                          <p>
+                          
+                          <p class="blogger-quote">
                               <?php the_field('blog_description'); ?>
                           </p>
 						
@@ -292,6 +360,13 @@
                               </tr>
                           </table>
 					
+                          <table>
+                            <tr>
+                                    <td><a target="_blank" href="<?php the_field('example_post_1');?>"><i class="icon-pencil"></i> Sample Post 1</a></td>
+                                    <td><a target="_blank" href="<?php the_field('example_post_2');?>"><i class="icon-pencil"></i> Sample Post 2</a></td>
+                                    <td><a target="_blank" href="<?php the_field('about_page');?>"><i class="icon-question"></i> About Page</a></td>
+                                </tr>
+                        </table>
 						</section>
 						
 						<section id="blogger-blog">
@@ -324,6 +399,27 @@
                                     ?>
                                     </td>
                                     
+                                    
+                                    <td>
+                                        Grew up: <strong><?php $field = get_field_object('grew_up'); echo $field['choices'][get_field('grew_up')];?></strong>
+                                    </td>
+                                    
+                                    <td>
+                                    <?php
+                                    
+                                    $field = get_field_object('lifestyle');
+                                    $lifestyle = $field['choices'][get_field('lifestyle')];
+                                    
+                                    if ($lifestyle == 'Part Time Blogger'){
+                                    
+                                        $lifestyle_additional = '. Additional work: '.get_field('other_work');
+
+                                    };
+                                    
+                                    $lifestyle_additional
+                                    
+                                    ?>
+                                    </td>
                                     <td>
                                     <?php
                                          
@@ -339,37 +435,10 @@
                                     ?>
                                     
                                     </td>
-                                    
-                                    <td>
-                                        Grew up: <strong><?php $field = get_field_object('grew_up'); echo $field['choices'][get_field('grew_up')];?></strong>
-                                    </td>
-                                    
-                                    <?php
-                                    
-                                    $field = get_field_object('lifestyle');
-                                    $lifestyle = $field['choices'][get_field('lifestyle')];
-                                    
-                                    if ($lifestyle == 'Part Time Blogger'){
-                                    
-                                        $lifestyle_additional = '. Additional work: '.get_field('other_work');
-
-                                    };
-                                    
-                                    $lifestyle_additional
-                                    
-                                    ?>
+                                 
                                 </tr>
                             </table>
-                            <table>
-                                <tr>
-                                
-                                    <td class="tooltipster" title="<?php echo $lifestyle; echo $lifestyle_additional;?>">
-                                        <i class="icon-suitcase"></i> <strong><?php echo $lifestyle;?></strong>
-                                    </td>                                    
-                                    
-						          </tr>
-						      </table>
-						          
+                                  
                               <table>
 						          
 						          <tr>
@@ -403,15 +472,22 @@
 						
 						<section id="blogger-availability">
 						    
-						    <h4>Availability</h4>
+						    <h4>Availability & Travel Plans</h4>
 						    
 						    <table>
 						        <tr>
-						            <td>Based: <strong><?php the_field('based_city');?>, <?php $field = get_field_object('based_country'); echo $field['choices'][get_field('based_country')];?></strong></td>
+						            <td><i class="icon-map-marker"></i> Based: <strong><?php the_field('based_city');?>, <?php $field = get_field_object('based_country'); echo $field['choices'][get_field('based_country')];?></strong> <img class="country-flag" src="http://bloggermatchup.com/img/flags/<?php echo strtolower(get_field('based_country'));?>.png"></img></td>
+                                    <td class="tooltipster" title="<?php echo $lifestyle; echo $lifestyle_additional;?>">
+                                        <i class="icon-suitcase"></i> <strong><?php echo $lifestyle;?></strong>
+                                    </td>   
 						        </tr>
 						    </table>
 						    
-						    <h5>Travel Plans</h5>
+						    <p class="blogger-quote">
+						        <?php the_field('availability_description');?>
+						    </p>
+						    
+						    <br/>
 						    
 						    <?php
 						    
@@ -422,11 +498,9 @@
 						    $countries_12_months = array();
 						    
 						    ?>
-						    </section>
 						    
 						    
-						    <section id="blogger-travelplans">
-						    <div class="countries-visiting_section">The next three months: <br/>
+						    <div class="countries-visiting-section">The next 3 months: <br/>
 						    <?php
 						    
 						    $country_count == 0;
@@ -437,8 +511,10 @@
                                         
                                         $sub_field = get_sub_field_object('country_visited');
                                         
-                                        echo '<img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_sub_field('country_visited')).'.png"></img>';
+                                        echo '<span><img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_sub_field('country_visited')).'.png"></img>';
                                         echo $sub_field['choices'][get_sub_field('country_visited')];
+                                        echo '</span>';
+                                        
                                         
                                         if ($country_count != count(get_field('countries_3_months'))){
                                         
@@ -451,8 +527,9 @@
                                 };
                             ?>
                             
+                            </div>
                             
-                            <div class="countries-visiting_section">In 3-6 months time:<br/>
+                            <div class="countries-visiting-section">In 3-6 months time:<br/>
 						    <?php
 						    
 						    $country_count == 0;
@@ -463,8 +540,9 @@
                                         
                                         $sub_field = get_sub_field_object('country_visited');
                                         
-                                        echo '<img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_sub_field('country_visited')).'.png"></img>';
+                                        echo '<span><img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_sub_field('country_visited')).'.png"></img>';
                                         echo $sub_field['choices'][get_sub_field('country_visited')];
+                                        echo '</span>';
                                         
                                         if ($country_count != count(get_field('countries_6_months'))){
                                         
@@ -479,7 +557,7 @@
                             
                             </div>
                             
-                            <div class="countries-visiting_section">In 6-12 months time:<br/>
+                            <div class="countries-visiting-section">In 6-12 months time:<br/>
 						    <?php
 						    
 						    $country_count == 0;
@@ -490,8 +568,9 @@
                                         
                                         $sub_field = get_sub_field_object('country_visited');
                                         
-                                        echo '<img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_sub_field('country_visited')).'.png"></img>';
+                                        echo '<span><img class="country-flag" src="http://bloggermatchup.com/img/flags/'.strtolower(get_sub_field('country_visited')).'.png"></img>';
                                         echo $sub_field['choices'][get_sub_field('country_visited')];
+                                        echo '</span>';
                                         
                                         if ($country_count != count(get_field('countries_12_months'))){
                                         
@@ -507,6 +586,16 @@
 						    
 						    
 						    <div id="chart_div" style="width: 475; height: 300px;"></div>
+						    
+						    <div id="map-legend">
+						        <table>
+						            <tr>
+						                <td><i class="icon-circle" style="color:#DE3403;"></i> Next 3 months</td>
+						                <td><i class="icon-circle" style="color:#FF9D1C;"></i> 3-6 months</td>
+						                <td><i class="icon-circle" style="color:#FFFF1C;"></i> 6-12 months</td>
+						            </tr>
+						        </table>
+						    </div>
 						</section>
 						
 						<section id="blogger-audience">
@@ -570,7 +659,10 @@
 						        </tr>
 						    </table>
 						    
-						    <h5>About the audience</h5><?php the_field('demographics_description');?>
+						    <h5>About the audience</h5>
+						    <p class="blogger-quote">
+						      <?php the_field('demographics_description');?>
+						    </p>
 						    
 						    
 						</section>
@@ -587,8 +679,8 @@
 				         if (get_field('worked_with_tat')){
                         ?>
                          
-                         <p>
-                             <strong>This blogger has experience with a TAT</strong><br/>
+                         <strong><i class="icon-check"></i> This blogger has experience with a TAT</strong><br/>
+                         <p class="blogger-quote">
                              <?php the_field('tat_experience');?>
                          </p>
                          
@@ -601,13 +693,13 @@
                          if (get_field('worked_with_industry')){
                         ?>
                          
-                         <p>
-                             <strong>This blogger has experience with a TAT</strong><br/>
+                         <strong><i class="icon-check"></i> This blogger has experience working with companies</strong><br/>
+                         <p class="blogger-quote">
                              <?php the_field('industry_experience');?>
                          </p>
                          
                          <?php
-                         }
+                         };
                          ?>
                          
                          <?php if (get_field('awards')){
@@ -616,11 +708,11 @@
                             
                             while(has_sub_field('awards'))
                             {
-                                        echo '<p class="awards">';
+                                        echo '<p class="awards blogger-quote">';
                                         echo '<strong>';
                                         echo '<a target="_blank" href="';
                                         the_field('award_url');
-                                        echo '">';
+                                        echo '"> <i class="icon-link"></i> ';
                                         echo get_sub_field('award_name');
                                         echo '</a>';
                                         echo '</strong>';
@@ -666,12 +758,26 @@
 			
 				</div> <!-- end #main -->
 				
-				<div id="sidebar3" class="fluid-sidebar sidebar span2" role="complementary">
-            	   <div class="widget">
-            	      <h3>Favourite Bloggers</h3>
+				<div id="sidebar3" class="fluid-sidebar sidebar span2 sidebar-right" role="complementary">
+            	   
+            	      <div class="widget">
+            	          <table>
+            	              <tr>
+            	                  <td><a class="btn btn-success"><i class="icon-envelope"></i> Get in touch</a></td>
+            	               </tr>
+            	               <tr>
+            	                  <td><a class="btn btn-primary"><i class="icon-star-empty"></i> Favourite</a></td>
+            	              </tr>
+            	          </table>
+
+            	         
+            	      </div>
+            	      
+            	      <div class="widget">
+            	      <h4>Favourite Bloggers</h4>
             	   </div>
                     <div id="blogger-blog-image">
-            	      <h3>Recently Viewed</h3>
+            	      <h4>Recently Viewed</h4>
             	   </div>
             	</div><!--End of sidebar-->
     
@@ -730,7 +836,7 @@
                 $country_pair = array();
 			
                 array_push($country_pair,$country);
-                array_push($country_pair,(1/3));
+                array_push($country_pair,(1/2));
                 
                 array_push($json_countries,$country_pair);
                 
@@ -742,7 +848,7 @@
                 $country_pair = array();
 			
                 array_push($country_pair,$country);
-                array_push($country_pair,(2/3));
+                array_push($country_pair,(1/1));
                 
                 array_push($json_countries,$country_pair);
                 
@@ -774,9 +880,13 @@
 
         var options = {
         
-        colorAxis: {colors: ['green', 'blue']},
+        colorAxis: {minValue: 0, maxValue:1,  colors: ['#DE3403','#FF9D1C','#FFFF1C']},
         legend: 'none',
-        tooltip:  {textStyle: {trigger : 'none'}}
+        tooltip:  {
+            
+            trigger : 'none'
+            
+            }
         
         };
 

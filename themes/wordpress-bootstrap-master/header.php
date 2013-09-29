@@ -31,7 +31,7 @@
 		<!-- end of wordpress head -->
 
 		<!-- theme options from options panel -->
-		<?php get_wpbs_theme_options(); ?>
+		<!--<?php get_wpbs_theme_options(); ?>-->
 		
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 

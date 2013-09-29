@@ -12,6 +12,8 @@
 -------------------------------------------------------------- */
 @import url('../wordpress-bootstrap-master/style.css');
 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
@@ -82,15 +84,15 @@ margin-left: 0;
 }
 
 
-.social li span:hover {
+.social li:hover span {
 border-top-left-radius: 0px;
 }
 
-.social li span.facebook:hover {
+.social li:hover span.facebook {
 background-color: #3c5fac;
 }
 
-.social li span.twitter:hover {
+.social li:hover span.twitter {
 background-color: #5ec3df;
 }
 
@@ -102,11 +104,11 @@ background-position: -256px 0;
 background-position: -32px 0;
 }
 
-.social li span.google:hover {
+.social li:hover span.google {
 background-color: #c63d2d;
 }
 
-.social li span.pinterest:hover {
+.social li:hover span.pinterest {
 background-color: #cb2027;
 }
 
@@ -116,7 +118,7 @@ background-position: -416px 0;
 
 
 
-.social li a.rss:hover {
+.social li:hover a.rss {
 background-color: #ff9900;
 }
 
@@ -124,7 +126,12 @@ background-color: #ff9900;
 background-position: -96px 0;
 }
 
-
+#blogger-blog-image img
+{
+    max-width:90%;
+    margin-top:5px;
+    margin-bottom:5px;
+}
 
 
 .sidebar-industry-blogger
@@ -133,11 +140,12 @@ background-position: -96px 0;
 }
 
 
-.social li i{
-font-size: 18px;
+.social li i {
+font-size: 14px;
 position: relative;
 margin-left: 10px;
-bottom: 9px;
+bottom: 11px;
+font-style: inherit;
 }
 
 .social-icon
@@ -165,3 +173,123 @@ bottom: 9px;
 {
       width:100%; 
 }
+
+
+.sidebar td 
+{
+    vertical-align:top;
+}
+
+
+.single-blogger table
+{
+    margin-top:10px;
+}
+
+a 
+{
+    color:grey;
+}
+
+.country-flag {
+position: relative;
+bottom: 2px;
+padding-right: 3px;
+}
+
+
+.single-blogger section {
+margin-top: 20px;
+}
+
+
+h5 {
+font-size: 15px;
+font-weight: bold;
+margin-bottom: 0px;
+}
+
+
+.social a icon
+{
+    left: 7px;
+    color:white;
+}
+
+
+.social a icon.icon-smaller
+{
+    left: 11px;
+}
+
+
+.blogger-quote
+{
+
+min-height: 20px;
+padding: 11px;
+margin-bottom: 20px;
+background-color: #f5f5f5;
+border: 1px solid #e3e3e3;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+
+.sidebar-slide-down 
+{
+margin-top: 10px;
+color: grey;
+text-decoration: underline;
+text-align: center;
+cursor:pointer;
+}
+
+
+
+section
+{
+border-bottom: 1px solid #eeeeee;
+padding-bottom:15px;
+}
+
+
+.countries-visiting-section {
+margin-bottom: 10px;
+}
+
+
+.countries-visiting-section span {
+    padding-right:12px;
+}
+
+
+h1
+{
+    font-family: 'Roboto Slab', serif;
+}
+
+
+.single-blogger .sidebar-right table
+{
+    text-align:center;
+}
+
+.single-blogger .sidebar-right table a
+{
+    width:80%;
+    margin-top:10px;
+}
+
+@media (min-width: 768px) {
+    .single-blogger .sidebar-right
+    {
+        padding-top:130px;
+    }
+}
+
+
