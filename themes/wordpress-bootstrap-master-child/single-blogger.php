@@ -348,7 +348,9 @@
                           <table>
 						      <tr>
 						          <td><i class="icon-tag"></i> <?php echo implode(', ', get_field('niches')); ?>              <?php
-                                       if (get_field('tags')){
+                                       echo '</span>';
+                                        
+                                        if (get_field('tags')){
                                         echo ', ';
 						                  echo  str_replace(",",", ",get_field('tags'));
                                         };
@@ -758,27 +760,12 @@
 			
 				</div> <!-- end #main -->
 				
+				 
+				
 				<div id="sidebar3" class="fluid-sidebar sidebar span2 sidebar-right" role="complementary">
             	   
-            	      <div class="widget">
-            	          <table>
-            	              <tr>
-            	                  <td><a class="btn btn-success"><i class="icon-envelope"></i> Get in touch</a></td>
-            	               </tr>
-            	               <tr>
-            	                  <td><a class="btn btn-primary"><i class="icon-star-empty"></i> Favourite</a></td>
-            	              </tr>
-            	          </table>
-
-            	         
-            	      </div>
-            	      
-            	      <div class="widget">
-            	      <h4>Favourite Bloggers</h4>
-            	   </div>
-                    <div id="blogger-blog-image">
-            	      <h4>Recently Viewed</h4>
-            	   </div>
+            	      <?php dynamic_sidebar( 'industry-blogger-blogger' ); ?> 
+            	   
             	</div><!--End of sidebar-->
     
 			</div> <!-- end #content -->
