@@ -26,7 +26,7 @@
                             
                             if ($ID == $page -> ID){
                                 
-                                echo 'active selected';    
+                                echo 'active selected';
                                 
                             }
                             

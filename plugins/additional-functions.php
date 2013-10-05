@@ -325,11 +325,11 @@ function results_blogger($blogger){
 function do_form( $atts ){
 
         extract(shortcode_atts(array(
-                'ID' => 0
+                'ID' => 5
        ), $atts));
 
     
-    return $ID;
+    $form_ID = $ID;
 
 }
 
@@ -338,9 +338,32 @@ function do_form( $atts ){
 add_shortcode('do_acf_form', 'do_form');
 
 
+add_action( 'init', 'register_shortcodes');
 
 
 
+
+
+function process_image($file, $post_id, $caption){
+ 
+  require_once(ABSPATH . "wp-admin" . '/includes/image.php');
+  require_once(ABSPATH . "wp-admin" . '/includes/file.php');
+  require_once(ABSPATH . "wp-admin" . '/includes/media.php');
+ 
+  $attachment_id = media_handle_upload($file, $post_id);
+ 
+  update_post_meta($post_id, '_thumbnail_id', $attachment_id);
+
+  $attachment_data = array(
+  	'ID' => $attachment_id,
+    'post_excerpt' => $caption
+  );
+  
+  wp_update_post($attachment_data);
+
+  return $attachment_id;
+
+}
 
 ?>
 

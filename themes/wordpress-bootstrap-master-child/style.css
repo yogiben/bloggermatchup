@@ -292,7 +292,7 @@ h1
     }
 }
 
-.page-template-template-search-php p.label, .page-template-template-create-offer-php p.label
+.page-template-template-search-php p.label, .page-template-template-create-offer-php p.label, .page-template-template-edit-blogger-php p.label
 {
 display: inline-block;
 padding: ;
@@ -502,4 +502,19 @@ width: 98%;
 
 .page-template-template-my-offers-php section h5 {
 margin-bottom: 10px;
+}
+
+
+.page-template-template-edit-blogger-php td.order {
+display: none;
+}
+
+
+.page-template-template-edit-blogger-php td input {
+max-width: 93%;
+}
+
+
+.page-template-template-edit-blogger-php th.order {
+border: none;
 }
