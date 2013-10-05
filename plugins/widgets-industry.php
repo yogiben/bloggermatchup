@@ -57,7 +57,8 @@ class industry_favourite extends WP_Widget {
 	?>
 	
 	<div class="widget">
-		<h4>Favourites Bloggers</h4>
+		<h4>Favourite Bloggers</h4>
+		<p>You don't have any favourite bloggers</p>
 	</div>
 		
 	<?php
@@ -87,7 +88,132 @@ class industry_recent extends WP_Widget {
 	?>
 	
 	<div class="widget">
-		<h4>Favourites Bloggers</h4>
+		<h4>Recently Viewed</h4>
+		<p>You don't have any recently viewed bloggers yet</p>
+	</div>
+		
+	<?php
+	}
+
+	function update( $new_instance, $old_instance ) {
+		// Save widget options
+	}
+
+	function form( $instance ) {
+		// Output admin widget options form
+	}
+};
+
+
+
+
+
+
+class industry_offers extends WP_Widget {
+
+	function industry_offers() {
+		// Instantiate the parent object
+		parent::__construct( false, 'Industry Offers' );
+	}
+
+	function widget( $args, $instance ) {
+	?>
+	
+	<div class="widget">
+		<h4>Your Offers</h4>
+		<p>You don't have any public offers</p>
+		<small><a href="http://bloggermatchup.com/industry/create-an-offer/"><i class="icon-plus"></i> Create new Offer</a></small>
+	</div>
+		
+	<?php
+	}
+
+	function update( $new_instance, $old_instance ) {
+		// Save widget options
+	}
+
+	function form( $instance ) {
+		// Output admin widget options form
+	}
+};
+
+
+
+
+
+
+class industry_search extends WP_Widget {
+
+	function industry_search() {
+		// Instantiate the parent object
+		parent::__construct( false, 'Industry Search' );
+	}
+
+	function widget( $args, $instance ) {
+	?>
+	
+	<div class="widget">
+		<h4>Find bloggers</h4>
+		<p>Search our database for bloggers</p>
+		<div class="btn-container"><a class="btn btn-success" href="http://bloggermatchup.com/industry/search"><i class="icon-search"></i> Search</a></div>
+	</div>
+		
+	<?php
+	}
+
+	function update( $new_instance, $old_instance ) {
+		// Save widget options
+	}
+
+	function form( $instance ) {
+		// Output admin widget options form
+	}
+};
+
+
+class industry_new extends WP_Widget {
+
+	function industry_new() {
+		// Instantiate the parent object
+		parent::__construct( false, 'New Bloggers' );
+	}
+
+	function widget( $args, $instance ) {
+	?>
+	
+	<div class="widget">
+		<h4>New Bloggers</h4>
+		
+		  <?php 
+			wp_reset_query();
+			
+			$args = array(
+			'post_type' => 'blogger',
+			'posts_per_page' => 5);
+			
+			$recent_posts_query = new WP_Query( $args );
+			
+			if ( $recent_posts_query->have_posts() ) {
+			
+				echo '<ul>';
+			
+			while ( $recent_posts_query->have_posts() ) {
+					$recent_posts_query->the_post();
+					
+						echo '<li>';
+						echo '<a href="';
+						the_permalink();
+						echo '">';
+						the_title();
+						echo '</a>';
+						echo '</li>';
+				
+					};
+					
+					echo '</ul>';
+				};
+		
+		?>
 	</div>
 		
 	<?php
@@ -110,6 +236,9 @@ function industry_register_widgets() {
 	register_widget( 'industry_blogger_contact' );
 	register_widget( 'industry_favourite' );
 	register_widget( 'industry_recent' );
+	register_widget( 'industry_search' );
+	register_widget( 'industry_offers' );
+	register_widget( 'industry_new' );
 }
 
 add_action( 'widgets_init', 'industry_register_widgets' );

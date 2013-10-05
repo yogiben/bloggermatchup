@@ -4,6 +4,29 @@ Template Name: Search
 */
 ?>
 
+
+<?php
+
+$options = array(
+    'field_groups' => array(78), // this will find the field groups for this post (post ID's of the acf post objects)
+
+    'form_attributes' => array( // attributes will be added to the form element
+        'id' => 'post',
+        'class' => '',
+        'action' => 'search',
+        'method' => 'post',
+    ),
+    
+    'return' => add_query_arg( 'updated', 'true', get_permalink() ), // return url
+    'html_before_fields' => '', // html inside form before fields
+    'html_after_fields' => '', // html inside form after fields
+    'submit_value' => 'Search', // value for submit field
+    'updated_message' => 'Search.', // default updated message. Can be false to show no message
+);
+
+?>
+<?php acf_form_head();?>
+
 <?php get_header(); ?>
 			
 			<div id="content" class="clearfix row-fluid">
@@ -23,7 +46,7 @@ Template Name: Search
 						<section class="post_content clearfix" itemprop="articleBody">
 							
                         
-							
+							<?php acf_form($options);?>
 					
 						</section> <!-- end article section -->
 						
@@ -54,7 +77,12 @@ Template Name: Search
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
+                
+                <div id="sidebar3" class="fluid-sidebar sidebar span2 sidebar-right" role="complementary">
+            	   
+            	      <?php dynamic_sidebar( 'industry-favourite-recent' ); ?> 
+            	   
+            	</div><!--End of sidebar-->
     
 			</div> <!-- end #content -->
 

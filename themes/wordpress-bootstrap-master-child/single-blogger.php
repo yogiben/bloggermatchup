@@ -5,7 +5,7 @@
 			<?php $blogger = 16;?>
 			<div id="content" class="clearfix row-fluid">
             
-            	<div id="sidebar1" class="fluid-sidebar sidebar span3 sidebar-industry-blogger" role="complementary">
+            	<div id="sidebar1" class="fluid-sidebar sidebar well span3 sidebar-industry-blogger" role="complementary">
             	   <div id="blogger-profile-image">
             	       <?php echo wp_get_attachment_image( get_field('blogger_photo'), 'thumbnail'); ?>
             	   </div>

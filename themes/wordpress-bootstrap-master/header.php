@@ -37,6 +37,17 @@
 
 		<!-- typeahead plugin - if top nav search bar enabled -->
 		<?php require_once('library/typeahead.php'); ?>
+			
+        
+        <!-- Variables -->	
+        <?php $user_ID = get_current_user_id(); ?>
+        
+        
+        <script>
+            
+            user_ID = <?php echo $user_ID;?>;
+            
+        </script>
 				
 	</head>
 	
