@@ -66,6 +66,13 @@ if( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) &&  $_POS
 			//Personal
 			$form_IDs[42] = 5;
 			
+			
+			//Data & Links
+			$form_IDs[130] = 11;
+
+            //Data & Links
+			$form_IDs[133] = 7;
+			
 			//Pictures
 			$form_IDs[118] = 'pictures';
 

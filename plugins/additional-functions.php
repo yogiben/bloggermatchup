@@ -363,12 +363,71 @@ function process_image($file, $post_id, $caption){
 
   return $attachment_id;
 
+};
+
+function count_blogger($new_blogger){
+
+   
+
+
+    $current_user_ID = get_current_user_id();
+    
+    echo 'current user: ';
+    echo $current_user_ID;
+    
+    echo ' <br/> blog: ';
+    echo $new_blogger;
+
+    $recent_bloggers = get_user_meta($current_user_ID,'recent_bloggers',true);
+    
+
+    
+    if ($recent_bloggers == ''){
+    
+    
+        $recent_bloggers = array();
+        
+        echo 'empty';
+
+    } 
+    
+    else {
+    
+    echo 'Not empty:   COUNTING BLOGGER: ';
+    
+    var_dump($recent_bloggers);
+    
+        $recent_bloggers = json_decode($recent_bloggers);
+        
+        if (in_array($new_blogger,$recent_bloggers)) {
+
+            //blogger already there
+        
+        } else if ( count($recent_bloggers > 5) ) {
+        
+            unset($recent_bloggers[0]);
+            
+            array_push($recent_bloggers,$new_blogger);
+        
+        }
+        
+        
+        
+        
+        
+    
+    }
+    
+    
+    
+    $recent_bloggers = json_encode($recent_bloggers);
+    
+    update_user_meta($current_user_ID,'recent_bloggers',$recent_bloggers);
+    
+    var_dump($recent_bloggers);
+    
+    
 }
 
+
 ?>
-
-
-
-
-
-

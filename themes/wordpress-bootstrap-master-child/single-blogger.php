@@ -883,3 +883,6 @@
     </script>
 
 <?php get_footer(); ?>
+
+<?php echo 'counting blogger';?>
+<?php count_blogger($blogger);?>
